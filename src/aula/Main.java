@@ -36,8 +36,16 @@ public class Main {
         System.out.println(var3);
         */
         //Constantes
+        /*
         final int vida_maxima = 10;
-
         System.out.println(vida_maxima);
+         */
+        String[] nome = new String[5];
+        nome[0] = "Halerson";
+        nome[1] = "Brendha";
+        System.out.println("O nome é "+nome[1]);
+        String[][] var2 = new String[5][5];
+        var2[0][0] = "Roque";
+        System.out.println(var2[0][0]);
     }
 }

@@ -40,12 +40,54 @@ public class Main {
         final int vida_maxima = 10;
         System.out.println(vida_maxima);
          */
+        //Arrays
+         /*
         String[] nome = new String[5];
         nome[0] = "Halerson";
         nome[1] = "Brendha";
+
+
         System.out.println("O nome é "+nome[1]);
         String[][] var2 = new String[5][5];
         var2[0][0] = "Roque";
         System.out.println(var2[0][0]);
+        */
+        int vida = 101;
+        /*
+        >
+        <
+        >=
+        <=
+        ==
+        !=
+         */
+        if (vida < 100) {
+            vida += 100;
+            System.out.println("Minha vida é maior a 100!");
+        } else {
+            System.out.println("Minha vida não é igual a 100!");
+        }
+
+        String nome = "Brendha";
+        if (nome == "Brendha") {
+            System.out.println("Nome igual a " + nome);
+        } else if (nome == "Roque") {
+
+        } else if (nome == "Thayna") {
+
+        } else {
+
+        }
+
+        if (nome != "Roque") {
+            System.out.println("O nome é diferente de Roque");
+        }
+
+        boolean var = true;
+        if (var)
+            System.out.println("Verdade");
+
+        System.out.println("");
+
     }
 }

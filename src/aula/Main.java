@@ -52,7 +52,7 @@ public class Main {
         var2[0][0] = "Roque";
         System.out.println(var2[0][0]);
         */
-        int vida = 101;
+        //int vida = 100;
         /*
         >
         <
@@ -60,7 +60,7 @@ public class Main {
         <=
         ==
         !=
-         */
+         /*
         if (vida < 100) {
             vida += 100;
             System.out.println("Minha vida é maior a 100!");
@@ -88,6 +88,21 @@ public class Main {
             System.out.println("Verdade");
 
         System.out.println("");
+        */
+        int vida = 90;
+
+        switch (vida) {
+            case 90:
+                //Execute alguma ação aqui!
+                System.out.println("Quero que meu personagem corra mais rápido!");
+                break;
+            case 30:
+                System.out.println("Minha vida é igual a 30!");
+                break;
+            default:
+                System.out.println("Nenhuma condição bateu! Eu tenho 100 de vida!");
+                break;
+        }
 
     }
 }

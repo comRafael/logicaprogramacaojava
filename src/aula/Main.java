@@ -89,6 +89,8 @@ public class Main {
 
         System.out.println("");
         */
+
+        /*
         int vida = 90;
 
         switch (vida) {
@@ -102,6 +104,29 @@ public class Main {
             default:
                 System.out.println("Nenhuma condição bateu! Eu tenho 100 de vida!");
                 break;
+        }
+         */
+        /*
+        int vida_1 = 100;
+        int vida_2 = 100;
+        int vida_3 = 50;
+        int vida_final = vida_1 + vida_2 + vida_3;
+
+        int vida_final2 = ((vida_1 + vida_2) / 2) * 2;
+        System.out.println(vida_final2);
+         */
+        String nome_jogador = "Brendha";
+        int skill = 100;
+        /*
+        if ((nome_jogador == "Brendha" && skill == 100) && skill <= 90) {
+            //podemos executar esse código
+            System.out.println("verdade");
+        }else {
+            System.out.println("entramos no else");
+         */
+        if ((nome_jogador == "Brendha" || nome_jogador == "Halerson") &&
+                skill >= 100) {
+            System.out.println("Comece o jogo!");
         }
 
     }

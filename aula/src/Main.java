@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -193,6 +194,27 @@ public class Main {
 
         System.out.println("Resultado = " + vr);
          */
+
+        Player player = new Player();
+        ArrayList<Inimigo> inimigos = new ArrayList<Inimigo>();
+
+        inimigos.add(new Elfinimigo(100));
+        inimigos.add(new Elfinimigo(100));
+        inimigos.add(new Elfinimigo(100));
+        inimigos.add(new Elfinimigo(100));
+        inimigos.add(new Elfinimigo(100));
+
+        for(int i = 0; i < inimigos.size();i++){
+            Inimigo inimigoLocal = inimigos.get(i);
+            if( i == 1){
+                inimigoLocal.tomarDano();
+                System.out.println(inimigoLocal.vida);
+            }else {
+             System.out.println(inimigoLocal.vida);
+            }
+        }
+
+
 
     }
 }

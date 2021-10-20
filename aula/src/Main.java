@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -116,16 +118,81 @@ public class Main {
         String nome_jogador = "Brendha";
         int skill = 100;
         /*
+
         if ((nome_jogador == "Brendha" && skill == 100) && skill <= 90) {
             //podemos executar esse código
             System.out.println("verdade");
         }else {
             System.out.println("entramos no else");
-         */
+
         if ((nome_jogador == "Brendha" || nome_jogador == "Halerson") &&
                 skill >= 100) {
             System.out.println("Comece o jogo!");
         }
+
+
+        /*
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("V1");
+
+        int V1 = scanner.nextInt();
+        System.out.println("V2");
+        int V2 = scanner.nextInt();
+        int vr = V1+V2;
+        if (V2 ==0){
+        vr = 0;
+        }
+        if (V2 ==1){
+        vr = V1;
+        }
+        if (V2 ==2){
+        vr = V1 + V1;
+        }
+        if (V2 ==3){
+            vr = V1+V1+V1;
+        }
+        if (V2 ==4){
+            vr = V1+V1+V1+V1;
+        }
+        if (V2 ==5){
+            vr = V1+V1+V1+V1+V1;
+        }
+        if (V2 ==6){
+            vr = V1+V1+V1+V1+V1+V1;
+        }
+        if (V2 ==7){
+            vr = V1+V1+V1+V1+V1+V1+V1;
+        }
+        if (V2 ==8){
+            vr = V1+V1+V1+V1+V1+V1+V1+V1;
+        }
+        if (V2 ==9){
+            vr = V1+V1+V1+V1+V1+V1+V1+V1+V1;
+        }
+        if (V2 ==10){
+            vr = V1+V1+V1+V1+V1+V1+V1+V1+V1+V1;
+        }
+
+        System.out.println("Resultado:" + vr);
+        */
+
+        /*
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("v1");
+        int v1 = scanner.nextInt();
+        System.out.println("v2");
+        int v2 = scanner.nextInt();
+        int vr = 0;
+
+//        for(int i = v1; i <= vr; i+=v2){
+        for(int i = 1; i <= v1; i++){
+            vr= vr + v2;
+            vr+=v2;
+        }
+
+        System.out.println("Resultado = " + vr);
+         */
 
     }
 }

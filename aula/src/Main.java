@@ -120,7 +120,7 @@ public class Main {
         int skill = 100;
 
 
-        if ((nome_jogador == "Brendha" && skill == 100) && skill <= 90) {
+        if ((nome_jogador == "Halls" && skill == 100) && skill <= 90) {
             //podemos executar esse código
             System.out.println("verdade");
         }else {

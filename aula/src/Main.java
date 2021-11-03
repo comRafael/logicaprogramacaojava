@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        /*
+
        int idade = 24;
        System.out.println("Minha idade é "+idade);
        idade = 25;
@@ -19,9 +19,9 @@ public class Main {
         System.out.println("Minha idade é "+idade);
         idade = 30;
         System.out.println("Minha idade é "+idade);
-         */
+
         // Tipos de variáveis;
-        /*
+
         int numero = 24000000;
         String frase = "Olá mundo";
         boolean var = true;
@@ -35,33 +35,33 @@ public class Main {
         System.out.println(var);
         System.out.println(var2);
         System.out.println(var3);
-        */
+
         //Constantes
-        /*
+
         final int vida_maxima = 10;
         System.out.println(vida_maxima);
-         */
+
         //Arrays
-         /*
+
         String[] nome = new String[5];
         nome[0] = "Halerson";
-        nome[1] = "Brendha";
+        nome[1] = "Halls";
 
 
         System.out.println("O nome é "+nome[1]);
         String[][] var2 = new String[5][5];
         var2[0][0] = "Roque";
         System.out.println(var2[0][0]);
-        */
+
         //int vida = 100;
-        /*
+
         >
         <
         >=
         <=
         ==
         !=
-         /*
+
         if (vida < 100) {
             vida += 100;
             System.out.println("Minha vida é maior a 100!");
@@ -69,18 +69,18 @@ public class Main {
             System.out.println("Minha vida não é igual a 100!");
         }
 
-        String nome = "Brendha";
-        if (nome == "Brendha") {
+        String nome = "Halls";
+        if (nome == "Halls") {
             System.out.println("Nome igual a " + nome);
         } else if (nome == "Roque") {
 
-        } else if (nome == "Thayna") {
+        } else if (nome == "Henrique") {
 
         } else {
 
         }
 
-        if (nome != "Roque") {
+        if (nome != "João") {
             System.out.println("O nome é diferente de Roque");
         }
 
@@ -89,9 +89,9 @@ public class Main {
             System.out.println("Verdade");
 
         System.out.println("");
-        */
 
-        /*
+
+
         int vida = 90;
 
         switch (vida) {
@@ -106,8 +106,8 @@ public class Main {
                 System.out.println("Nenhuma condição bateu! Eu tenho 100 de vida!");
                 break;
         }
-         */
-        /*
+
+
         int vida_1 = 100;
         int vida_2 = 100;
         int vida_3 = 50;
@@ -115,10 +115,10 @@ public class Main {
 
         int vida_final2 = ((vida_1 + vida_2) / 2) * 2;
         System.out.println(vida_final2);
-         */
-        String nome_jogador = "Brendha";
+
+        String nome_jogador = "Halls";
         int skill = 100;
-        /*
+
 
         if ((nome_jogador == "Brendha" && skill == 100) && skill <= 90) {
             //podemos executar esse código
@@ -132,7 +132,7 @@ public class Main {
         }
 
 
-        /*
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("V1");
@@ -176,9 +176,8 @@ public class Main {
         }
 
         System.out.println("Resultado:" + vr);
-        */
 
-        /*
+        
         Scanner scanner = new Scanner(System.in);
         System.out.println("v1");
         int v1 = scanner.nextInt();
@@ -193,28 +192,6 @@ public class Main {
         }
 
         System.out.println("Resultado = " + vr);
-         */
-
-        Player player = new Player();
-        ArrayList<Inimigo> inimigos = new ArrayList<Inimigo>();
-
-        inimigos.add(new Elfinimigo(100));
-        inimigos.add(new Elfinimigo(100));
-        inimigos.add(new Elfinimigo(100));
-        inimigos.add(new Elfinimigo(100));
-        inimigos.add(new Elfinimigo(100));
-
-        for(int i = 0; i < inimigos.size();i++){
-            Inimigo inimigoLocal = inimigos.get(i);
-            if( i == 1){
-                inimigoLocal.tomarDano();
-                System.out.println(inimigoLocal.vida);
-            }else {
-             System.out.println(inimigoLocal.vida);
-            }
-        }
-
-
 
     }
 }

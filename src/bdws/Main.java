@@ -8,14 +8,11 @@ public class Main {
 
         Juiz juiz = new Juiz();
 
-        Jogada compara = juiz.comparar(papel, tesoura);
-        juiz.comparar(pedra, tesoura);
-        juiz.comparar(tesoura, papel );
-
-//        boolean ganhou = papel.ganhou();
-//
-//
-//        Jogada jogada = new Papel();
-        System.out.println("Fim");
+        juiz.anunciarVencedor(papel, tesoura);
+        juiz.anunciarVencedor(pedra, tesoura);
+        juiz.anunciarVencedor(tesoura, papel );
+        juiz.anunciarVencedor(papel, papel);
+        juiz.anunciarVencedor(pedra, papel);
+        juiz.anunciarVencedor(papel, pedra);
     }
 }

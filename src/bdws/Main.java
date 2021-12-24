@@ -1,10 +1,41 @@
 package bdws;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
+
+    private static final List<Integer> divisores = Arrays.asList(2, 3, 5, 7);
+
     public static void main(String[] args) {
-        geradorNumeroPrimoBasico();
+//        geradorNumeroPrimoBasico();
+        geradorNumeroPrimoMelhor();
     }
 
+    private static void geradorNumeroPrimoMelhor() {
+        for (int i = 0; i < 1000; i++) {
+            if (isNumeroPrimoMelhor(i)){
+                System.out.println(i);
+            }
+        }
+    }
+
+    private static boolean isNumeroPrimoMelhor(int numero) {
+        if (numero < 11) {
+            if (numero == 2 ||numero == 3 ||numero == 5 ||numero == 7 ) {
+                return true;
+            }
+            return false;
+        }
+
+        for (int i = 0; i < divisores.size(); i++) {
+            if (numero % divisores.get(i) == 0){
+                return false;
+            }
+        }
+
+        return true;
+    }
     private static void geradorNumeroPrimoBasico() {
         for (int i = 0; i < 100; i++) {
             if (isNumeroPrimoBasico(i)){
@@ -24,6 +55,6 @@ public class Main {
                 dividiu++;
             }
         }
-        return dividiu <= 0;
+        return dividiu == 0;
     }
 }

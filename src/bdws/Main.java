@@ -5,15 +5,28 @@ import java.util.List;
 
 public class Main {
 
+    private static final int numaroMaximoTestar = 1000;
     private static final List<Integer> divisores = Arrays.asList(2, 3, 5, 7);
 
     public static void main(String[] args) {
 //        geradorNumeroPrimoBasico();
-        geradorNumeroPrimoMelhor();
+//        geradorNumeroPrimoMelhor();
+        compararResultados();
+        System.out.println("isNumeroPrimoBasico = " + isNumeroPrimoBasico(121));
+        System.out.println("isNumeroPrimoMelhor = " + isNumeroPrimoMelhor(121));
+    }
+
+    private static void compararResultados(){
+        for (int i = 0; i <= numaroMaximoTestar; i++){
+            if (isNumeroPrimoMelhor(i) != isNumeroPrimoBasico(i)) {
+                System.out.println("Houve divergencia no resultado do valor: " + i);
+            }
+        }
+        System.out.println("Finalizou");
     }
 
     private static void geradorNumeroPrimoMelhor() {
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < numaroMaximoTestar; i++) {
             if (isNumeroPrimoMelhor(i)){
                 System.out.println(i);
             }
@@ -37,7 +50,7 @@ public class Main {
         return true;
     }
     private static void geradorNumeroPrimoBasico() {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < numaroMaximoTestar; i++) {
             if (isNumeroPrimoBasico(i)){
                 System.out.println(i);
             }

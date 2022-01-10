@@ -2,7 +2,7 @@ package bdws;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main extends TesteAbstract{
     public static void main(String[] args) {
         /*
 //        int idade = 24;
@@ -192,7 +192,7 @@ public class Main {
             }
 
             System.out.println("Resultado = " + vr);
-         */
+
 
         //Chamando Classes
         Player player = new Player();
@@ -200,6 +200,29 @@ public class Main {
         Inimigo inimigo = new Inimigo();
         inimigo.perderVida();
         new Player().perderVida();
+         */
+       // new Main().instanceMain2();
+        new TesteAbstract();
 
     }
+
+    public void iniciarJogo(){
+
+    }
+
+    public void chamarMetodoAbstract(){
+        instanceMain2();
+    }
+
+    public void instanceMain2(){
+        new Main2().print1();
+    }
+
+    //Inner Class
+    class Main2{
+        private void print1(){
+            System.out.println("Chamando meu método");
+        }
+    }
+
 }

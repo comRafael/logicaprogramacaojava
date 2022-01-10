@@ -1,21 +1,26 @@
 package bdws;
 
-import java.util.Scanner;
+public class Main{
 
-public class Main implements PlayerInterface{
+    private static void metodo(){
+
+    }
+
+    public void metodo2(){
+        metodo();
+    }
+
     public static void main(String[] args) {
+      /*  new Player2().nascer();
+        Player2 player2 = new Player2();
+        player2.nascer();
+
+        Main main = new Main();
+        //main.metodo();
+        metodo();
+
+       */
 
     }
 
-    public void iniciar() {
-
-    }
-
-    public void morrer() {
-
-    }
-
-    public void perderVida() {
-
-    }
 }

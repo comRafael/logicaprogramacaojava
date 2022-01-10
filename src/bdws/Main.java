@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        /*
 //        int idade = 24;
 //        System.out.println("Minha idade é "+idade);
 //        idade = 25;
@@ -191,5 +192,14 @@ public class Main {
             }
 
             System.out.println("Resultado = " + vr);
+         */
+
+        //Chamando Classes
+        Player player = new Player();
+        player.perderVida();
+        Inimigo inimigo = new Inimigo();
+        inimigo.perderVida();
+        new Player().perderVida();
+
     }
 }

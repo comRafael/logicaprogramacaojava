@@ -7,6 +7,21 @@ public class Main {
 
     public Main(){
         player = new Player();
+        player = new Typeone();
+        if (player instanceof Typeone) {
+            
+        }else if(player instanceof Player){
+
+        }
+        /*
+        if(player == null){
+            System.out.println("Uninitiated player");
+            player = new Player();
+        }
+        if(player instanceof Player){
+            System.out.println("Jogador iniciado!");
+        }
+         */
         inimigo = new Inimigo();
     }
 

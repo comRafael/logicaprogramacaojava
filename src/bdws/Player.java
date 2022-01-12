@@ -1,13 +1,13 @@
 package bdws;
 
 public class Player {
+private int life = 100;
 
-    public int vidaInicial,tempo;
+public void atacarInimigo(Inimigo inimigo){
 
-    public Player(int vidaInicial, int tempo){
-        this.vidaInicial = vidaInicial;
-        System.out.println(this.vidaInicial);
-
+    inimigo.life--;
 
     }
+
+
 }

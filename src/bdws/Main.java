@@ -1,28 +1,30 @@
 package bdws;
 
-public class Main extends Player{
+public class Main {
 
-    private String nome = "Hello Friend!";
-    //private int[] numeros = new int[11];
-    private int[] numeros;
-    public static final int VIDA_MAXIMA = 100;
+    private Player player;
+    private Inimigo inimigo;
 
-    //Metodo Construtor
-    public Main(int n1, int n2){
-        super(n1,n2);
-        this.vidaInicial = 121;
-        //System.out.println(this.nome);
-        //numeros = new int[122];
+    public Main(){
+        player = new Player();
+        inimigo = new Inimigo();
     }
 
-    public String getNome(){
-        return nome;
+    public Player getPlayer(){
+        return player;
     }
+
+    public Inimigo getInimigo(){
+        return inimigo;
+    }
+
 
     public static void main(String[] args) {
-        //new Main();
-        Main main = new Main(100,200);
-        System.out.println(Main.VIDA_MAXIMA);
+
+        Main main = new Main();
+        Player player = main.getPlayer();
+        player.atacarInimigo(main.getInimigo());
+        System.out.println(main.getInimigo().life);
     }
 
 }

@@ -23,7 +23,7 @@ public class Main implements Runnable{
         entidades.add(new Entidade());
         entidades.add(new Entidade());
         for(int i = 0;i < entidades.size();i++){
-            Entidade entidade = entidades.get()
+            Entidade entidade = entidades.get(0);
 
         }
 

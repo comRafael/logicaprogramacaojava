@@ -1,12 +1,40 @@
 package pack;
 
+import java.util.ArrayList;
+
 public class Main implements Runnable{
     private boolean isRunning;
     private Thread thread;
 
+    private ArrayList<Entidade> entidades = new ArrayList<>();
+
+    public Main(){
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        entidades.add(new Entidade());
+        for(int i = 0;i < entidades.size();i++){
+            Entidade entidade = entidades.get()
+
+        }
+
+
+    }
+
     public static void main(String[] args) {
         Main main = new Main();
         main.start();
+
+
     }
 
     public synchronized void start(){
@@ -24,8 +52,8 @@ public class Main implements Runnable{
 
     public void run() {
         while (isRunning){
-            atualizar();
-            render();
+           // atualizar();
+            //render();
             /*
             try {
                 Thread.sleep(1000);

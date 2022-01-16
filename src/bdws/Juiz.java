@@ -2,15 +2,21 @@ package bdws;
 
 public class Juiz {
 
-    public void anunciarVencedor(Jogada j1, Jogada j2){
-        System.out.println("JOGADOR 1 "+ j1.getTipoString() + " X JOGADOR 2 "+ j2.getTipoString());
-        if(j1.ehGanhadorDo(j2)){
-            j1.ganhou();
-        } else if(j2.ehGanhadorDo(j1)){
-            j2.ganhou();
+    public void anunciarVencedor(Jogador jogador1, Jogador jogador2){
+        Jogada jogada1 = jogador1.jogar();
+        Jogada jogada2 = jogador2.jogar();
+        System.out.println(jogador1.getNome() + " " + jogada1.getTipoString() + " X " + jogador2.getNome() + " " + jogada2.getTipoString());
+        if(jogada1.ehGanhadorDo(jogada2)){
+            anunciar(jogador1, jogada1);
+        } else if(jogada2.ehGanhadorDo(jogada1)){
+            anunciar(jogador2, jogada2);
         } else {
             System.out.println("Empatou!");
         }
         System.out.println("");
+    }
+
+    private void anunciar(Jogador jogador, Jogada jogada) {
+        System.out.println(jogador.getNome() + " " + jogada.getTipo().toString() + " e ganhou!");
     }
 }

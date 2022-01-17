@@ -11,7 +11,11 @@ public class Game extends Canvas implements Runnable {
 
 
     public Game(){
-        this.setPreferredSize(new Dimension(WIDTH*SCALE,HEIGHT*SCALE));
+        setPreferredSize(new Dimension(WIDTH*SCALE,HEIGHT*SCALE));
+        initFrame();
+    }
+
+    public void initFrame(){
         frame = new JFrame();
         frame.add(this);
         frame.setResizable(false);
@@ -19,6 +23,10 @@ public class Game extends Canvas implements Runnable {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+    }
+
+    public synchronized void start(){
+
     }
 
     public static void main(String[] args) {

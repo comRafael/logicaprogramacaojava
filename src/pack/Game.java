@@ -39,7 +39,12 @@ public class Game extends Canvas implements Runnable {
     }
 
     public synchronized void stop(){
-
+        isRunning = false;
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
@@ -60,6 +65,24 @@ public class Game extends Canvas implements Runnable {
         Graphics g = image.getGraphics();
         g.setColor(new Color(2,2,2));
         g.fillRect(0,0,WIDTH,HEIGHT);
+
+        g.setColor(Color.GRAY);
+        g.fillRect(22,22,20,20);
+        /*
+        g.setColor(Color.RED);
+        g.fillRect(42,42,20,20);
+        g.setColor(Color.GREEN);
+        g.fillRect(62,62,20,20);
+        g.setColor(Color.YELLOW);
+        g.fillRect(82,82,20,20);
+        g.setColor(Color.BLUE);
+        g.fillRect(102,62,20,20);
+        g.setColor(Color.ORANGE);
+        g.fillRect(122,42,20,20);
+         */
+        //g.setColor(Color.white);
+        //g.fillOval(50,20,30,30);
+
         g = bs.getDrawGraphics();
         g.drawImage(image,0,0,WIDTH*SCALE,HEIGHT*SCALE,null);
         bs.show();
@@ -91,5 +114,6 @@ public class Game extends Canvas implements Runnable {
                 timer+=1000;
             }
         }
+        stop();
     }
 }

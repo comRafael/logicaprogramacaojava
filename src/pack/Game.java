@@ -9,9 +9,9 @@ public class Game extends Canvas implements Runnable {
     public static JFrame frame;
     private Thread thread;
     private boolean isRunning = true;
-    private final int WIDTH = 160;
-    private final int HEIGHT = 120;
-    private final int SCALE = 4;
+    private final int WIDTH = 240;
+    private final int HEIGHT = 160;
+    private final int SCALE = 3;
 
     private BufferedImage image;
 
@@ -66,9 +66,13 @@ public class Game extends Canvas implements Runnable {
         g.setColor(new Color(2,2,2));
         g.fillRect(0,0,WIDTH,HEIGHT);
 
-        g.setColor(Color.GRAY);
-        g.fillRect(22,22,20,20);
+
+        g.setFont(new Font("Arial",Font.BOLD,20));
+        g.setColor(Color.white);
+        g.drawString("Hello World 😎",40,20);
         /*
+         g.setColor(Color.GRAY);
+        g.fillRect(22,22,20,20);
         g.setColor(Color.RED);
         g.fillRect(42,42,20,20);
         g.setColor(Color.GREEN);

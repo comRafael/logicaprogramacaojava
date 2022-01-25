@@ -16,12 +16,20 @@ public class Game extends Canvas implements Runnable {
     private BufferedImage image;
 
     private Spritesheet sheet;
-    private BufferedImage player;
+    private BufferedImage[] player;
+    private int frames = 0;
+    private int maxframes = 9;
+    private int curAnimation = 0,maxAnimation = 3;
 
 
     public Game(){
         sheet = new Spritesheet("/spritesheet.png");
-        player = sheet.getSprite(0,0,16,16);
+        player = new BufferedImage[4];
+        player[0] = sheet.getSprite(0,0,16,16);
+        player[1] = sheet.getSprite(16,0,16,16);
+        player[2] = sheet.getSprite(32,0,16,16);
+        player[2] = sheet.getSprite(48,0,16,16);
+
         setPreferredSize(new Dimension(WIDTH*SCALE,HEIGHT*SCALE));
         initFrame();
         image = new BufferedImage(WIDTH,HEIGHT,BufferedImage.TYPE_INT_RGB);
@@ -58,6 +66,14 @@ public class Game extends Canvas implements Runnable {
     }
 
     public void tick(){
+        frames++;
+        if (frames > maxframes) {
+            frames = 0;
+            curAnimation++;
+            if (curAnimation > maxAnimation) {
+                curAnimation = 0;
+            }
+        }
 
     }
 
@@ -68,9 +84,17 @@ public class Game extends Canvas implements Runnable {
             return;
         }
         Graphics g = image.getGraphics();
-           g.setColor(Color.white);
+           g.setColor(Color.yellow );
         g.fillRect(0,0,WIDTH,HEIGHT);
-        g.drawImage(player,10,20,null);
+
+        /*Renderização do Jogo*/
+        Graphics2D g2 = (Graphics2D) g;
+        //g2.rotate(Math.toRadians(90),20,20);
+        g2.drawImage(player[curAnimation],20,20,null);
+        //g2.rotate(Math.toRadians(-90),20,20);
+        //g2.setColor(new Color(0,0,0,100));
+        //g2.fillRect(0,0,WIDTH,HEIGHT);
+        /***/
 
         /*
         g.setFont(new Font("Arial",Font.BOLD,20));

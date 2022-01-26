@@ -9,26 +9,28 @@ public class Game extends Canvas implements Runnable {
     public static JFrame frame;
     private Thread thread;
     private boolean isRunning = true;
-    private final int WIDTH = 240;
-    private final int HEIGHT = 160;
-    private final int SCALE = 3;
+    private final int WIDTH = 1366;
+    private final int HEIGHT = 768;
+    private final int SCALE = 1;
 
     private BufferedImage image;
 
     private Spritesheet sheet;
     private BufferedImage[] player;
     private int frames = 0;
-    private int maxframes = 9;
+    private double maxframes = 3.5;
     private int curAnimation = 0,maxAnimation = 3;
 
 
     public Game(){
         sheet = new Spritesheet("/spritesheet.png");
-        player = new BufferedImage[4];
-        player[0] = sheet.getSprite(0,0,16,16);
-        player[1] = sheet.getSprite(16,0,16,16);
-        player[2] = sheet.getSprite(32,0,16,16);
-        player[2] = sheet.getSprite(48,0,16,16);
+        player = new BufferedImage[6];
+        player[0] = sheet.getSprite(0,0,500,500);
+        player[1] = sheet.getSprite(0,0,500,500);
+        player[2] = sheet.getSprite(500,0,500,500);
+        player[3] = sheet.getSprite(1000,0,500,500);
+        player[4] = sheet.getSprite(1500,0,500,500);
+        player[5] = sheet.getSprite(1500,500,500,500);
 
         setPreferredSize(new Dimension(WIDTH*SCALE,HEIGHT*SCALE));
         initFrame();
@@ -84,13 +86,13 @@ public class Game extends Canvas implements Runnable {
             return;
         }
         Graphics g = image.getGraphics();
-           g.setColor(Color.yellow );
+           g.setColor(Color.darkGray );
         g.fillRect(0,0,WIDTH,HEIGHT);
 
         /*Renderização do Jogo*/
         Graphics2D g2 = (Graphics2D) g;
         //g2.rotate(Math.toRadians(90),20,20);
-        g2.drawImage(player[curAnimation],20,20,null);
+        g2.drawImage(player[curAnimation],1,1,null);
         //g2.rotate(Math.toRadians(-90),20,20);
         //g2.setColor(new Color(0,0,0,100));
         //g2.fillRect(0,0,WIDTH,HEIGHT);
